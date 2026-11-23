@@ -1,3 +1,7 @@
+/*
+ * Name: He Yichong
+ * Student ID: s1580500
+ */
 package com.example.testwikiapp.controller;
 
 import org.springframework.stereotype.Controller;
@@ -7,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(Model model) {
         model.addAttribute(
                 "intro",

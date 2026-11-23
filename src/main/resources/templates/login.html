@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+  Name: He Yichong
+  Student ID: s1580500
+-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Administrator sign in for The Commons Wiki.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23151d18'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-style='italic' fill='%23f1e8d5'%3EC%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+    <title>Administrator Login | The Commons</title>
+</head>
+<body>
+    <main class="auth-shell">
+        <section class="intro-panel" aria-labelledby="portal-title">
+            <a class="brand" href="/login" aria-label="The Commons administrator login">
+                <span class="brand-mark">C</span>
+                <span>The Commons · Admin</span>
+            </a>
+
+            <div class="intro-copy">
+                <p class="kicker">Restricted collection</p>
+                <h1 id="portal-title">Keeper of<em>the commons.</em></h1>
+            </div>
+
+            <div class="intro-note">
+                <p>
+                    Sign in to manage the shared knowledge archive. This first version
+                    verifies an administrator using credentials stored in the application.
+                </p>
+                <span class="volume">BIT235 · MVC · Vol. 01</span>
+            </div>
+        </section>
+
+        <section class="form-panel" aria-labelledby="login-title">
+            <div class="auth-card">
+                <p class="form-kicker">Administrator access</p>
+                <h2 id="login-title">Sign in to the archive.</h2>
+                <p class="form-intro">
+                    Enter the username and password assigned for this assessment.
+                </p>
+
+                <form th:action="@{/login}" th:object="${loginForm}" method="post">
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            th:field="*{username}"
+                            autocomplete="username"
+                            placeholder="Your administrator username"
+                            maxlength="60"
+                            required
+                            autofocus>
+                    </div>
+
+                    <div class="field">
+                        <label for="password">Password</label>
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            th:field="*{password}"
+                            autocomplete="current-password"
+                            placeholder="Your password"
+                            maxlength="100"
+                            required>
+                    </div>
+
+                    <div class="form-actions">
+                        <p class="form-note">
+                            Authorised administrators only.
+                        </p>
+                        <button class="primary-button" type="submit">
+                            Enter archive
+                        </button>
+                    </div>
+                </form>
+
+                <p class="credential-note">
+                    Assessment demonstration · Credentials are intentionally hard-coded
+                    and no database is connected at this stage.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
