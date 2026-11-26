@@ -10,8 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class TestwikiappApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void contextLoads() {
+    }
 }

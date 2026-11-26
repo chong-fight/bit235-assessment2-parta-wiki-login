@@ -5,12 +5,20 @@
 package com.example.testwikiapp.model;
 
 /**
- * Data submitted by the administrator login form.
+ * Stores the username and password used by the login form.
  */
-public class LoginForm {
+public class User {
 
     private String username;
     private String password;
+
+    public User() {
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     public String getUsername() {
         return username;

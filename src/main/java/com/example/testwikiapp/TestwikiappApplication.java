@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TestwikiappApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TestwikiappApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        // Start the embedded Spring Boot server.
+        SpringApplication.run(TestwikiappApplication.class, args);
+    }
 }

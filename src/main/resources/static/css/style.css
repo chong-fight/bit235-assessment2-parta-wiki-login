@@ -1,0 +1,217 @@
+/*
+ * Name: He Yichong
+ * Student ID: s1580500
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #174e70 0%, #2d777d 58%, #35685f 100%);
+    color: #222222;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before,
+body::after {
+    position: fixed;
+    content: "";
+    pointer-events: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+body::before {
+    top: -150px;
+    right: -100px;
+    width: 420px;
+    height: 420px;
+}
+
+body::after {
+    bottom: -160px;
+    left: -120px;
+    width: 380px;
+    height: 380px;
+}
+
+.page {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 42px 20px;
+}
+
+.card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 430px;
+    padding: 38px 40px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 18px 45px rgba(0, 30, 45, 0.28);
+}
+
+.brand-line {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    place-items: center;
+    color: #ffffff;
+    background: #1c6488;
+    border-radius: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.brand-name {
+    display: block;
+    color: #18394d;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    display: block;
+    margin-top: 2px;
+    color: #6a7680;
+    font-size: 13px;
+}
+
+.status-label {
+    margin: 0 0 8px;
+    color: #1c6488;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0 0 8px;
+    color: #1d2d35;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    margin: 0 0 26px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 13px;
+    background: #f8fafb;
+    border: 1px solid #b9c0c8;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus {
+    background: #ffffff;
+    border-color: #1c6488;
+    outline: 3px solid rgba(28, 100, 136, 0.13);
+}
+
+button,
+.button-link {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    color: #ffffff;
+    background: #1c6488;
+    border: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.button-link:hover {
+    background: #124c69;
+}
+
+.error-card h1 {
+    color: #b42318;
+}
+
+.error-card p,
+.success-card p {
+    margin: 0 0 24px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+.error-mark,
+.success-mark {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    margin: 2px auto 18px;
+    place-items: center;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.error-mark {
+    background: #b42318;
+}
+
+.success-mark {
+    background: #2f7d4a;
+}
+
+.site-footer {
+    position: relative;
+    z-index: 1;
+    padding: 16px 20px;
+    color: rgba(255, 255, 255, 0.76);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 28px 24px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
